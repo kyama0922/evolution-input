@@ -1,9 +1,9 @@
-﻿#ifndef __EVOLUTION_INPUT_H__
-#define __EVOLUTION_INPUT_H__
+﻿#ifndef __EVOLUTION_INPUT__
+#define __EVOLUTION_INPUT__
 
 
 //EVOLUTIONライブラリのインプット機能を提供する
 #include "evolution_inputnum.h"
 #include "evolution_input_interface.h"
 
-#endif // !__INPUT_H__
+#endif // !__EVOLUTION_INPUT__
