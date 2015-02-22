@@ -85,17 +85,17 @@ u32 KeyboardController::Release(){
 
 RESULT KeyboardController::QueryInterface(EVOLUTION::EVOLUTION_IID riid, void **ppvObject){
 
-    if (IsEqualGUID(riid, EVOLUTION_GUID::IID_IUnknown))
+    if (EVOLUTION_EQUALGUID(riid, EVOLUTION_GUID::IID_IUnknown))
     {
         *ppvObject = static_cast<IUnknown *>(this);
         this->AddRef();
     }
-    else if (IsEqualGUID(riid, EVOLUTION_GUID::IID_IKeyboardController))
+    else if (EVOLUTION_EQUALGUID(riid, EVOLUTION_GUID::IID_IKeyboardController))
     {
         *ppvObject = static_cast<IKeyboardController*>(this);
         this->AddRef();
     }
-    else if (IsEqualGUID(riid, EVOLUTION_GUID::IID_KeyboardController))
+    else if (EVOLUTION_EQUALGUID(riid, EVOLUTION_GUID::IID_KeyboardController))
     {
         *ppvObject = static_cast<KeyboardController*>(this);
         this->AddRef();

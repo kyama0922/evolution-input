@@ -45,17 +45,17 @@ u32 InputFactory::Release(){
 
 RESULT InputFactory::QueryInterface(EVOLUTION::EVOLUTION_IID riid, void **ppvObject){
 
-    if (IsEqualGUID(riid, EVOLUTION_GUID::IID_IUnknown))
+    if (EVOLUTION_EQUALGUID(riid, EVOLUTION_GUID::IID_IUnknown))
     {
         *ppvObject = static_cast<IUnknown *>(this);
         this->AddRef();
     }
-    else if (IsEqualGUID(riid, EVOLUTION_GUID::IID_IInputFactory))
+    else if (EVOLUTION_EQUALGUID(riid, EVOLUTION_GUID::IID_IInputFactory))
     {
         *ppvObject = static_cast<IInputFactory*>(this);
         this->AddRef();
     }
-    else if (IsEqualGUID(riid, EVOLUTION_GUID::IID_InputFactory))
+    else if (EVOLUTION_EQUALGUID(riid, EVOLUTION_GUID::IID_InputFactory))
     {
         *ppvObject = static_cast<InputFactory*>(this);
         this->AddRef();
